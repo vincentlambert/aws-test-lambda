@@ -9,7 +9,7 @@ Resources:
       Runtime: nodejs4.3
       CodeUri: ./
         MyTestAPI:
-          Type: API
+          Type: Api
           Properties:
             Path: /helloWorld
             Method: GET
