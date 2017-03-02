@@ -6,7 +6,7 @@ exports.handler = (event, context, callback) => {
   // TODO implement
   callback(null, {
     statusCode: '200',
-    body: 'Hello World from Lambda',
+    body: 'Hello World from Lambda from Github !',
     headers: {
       'Content-Type': 'application/json',
     },
