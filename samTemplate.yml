@@ -14,3 +14,15 @@ Resources:
           Properties:
             Path: /helloWorld
             Method: GET
+  RandomFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: random.handler
+      Runtime: nodejs4.3
+      CodeUri: ./
+      Events:
+        MyTestAPI:
+          Type: Api
+          Properties:
+            Path: /randomNumber
+            Method: GET
