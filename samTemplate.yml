@@ -79,7 +79,7 @@ Resources:
         Statement:
           - Effect: Allow
             Action:
-            - *
+              - *
             Resource: arn:aws:dynamodb:*:*:table/MyTestDynamoDBTable
       Roles:
         - Ref: IamRoleLambdaExecutionXXX
