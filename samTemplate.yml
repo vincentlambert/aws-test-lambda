@@ -2,19 +2,6 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Hello World Test Application
 Resources:
-  MyTestDynamoDBTable:
-    Type: AWS::DynamoDB::Table
-    Properties :
-      TableName: MyTestDynamoDBTable
-      AttributeDefinitions:
-        - AttributeName: username
-          AttributeType: S
-      KeySchema:
-        - AttributeName: username
-          KeyType: HASH
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
