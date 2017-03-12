@@ -3,6 +3,8 @@ phases:
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yml --s3-bucket eurelis-test-lambda --output-template-file NewSamTemplate.yml
+      # http://www.mbejda.com/automating-angular-js-builds-and-deployments-from-github-to-s3-buckets-with-codebuild/
+      # aws s3 sync ./dist s3://hellodeploy
 
 artifacts:
   files:
