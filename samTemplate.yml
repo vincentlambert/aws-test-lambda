@@ -6,6 +6,9 @@ Resources:
     Type: AWS::DynamoDB::Table
     Properties :
       TableName: MyTestDynamoDBTable
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
       AttributeDefinitions:
         - AttributeName: username
           AttributeType: S
@@ -16,9 +19,6 @@ Resources:
           KeyType: HASH
         - AttributeName: email
           KeyType: HASH
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
