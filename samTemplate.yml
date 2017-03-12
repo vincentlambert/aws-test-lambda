@@ -38,16 +38,3 @@ Resources:
           Properties:
             Path: /test
             Method: GET
-  MyTestDynamoDBTable:
-    Type: AWS::DynamoDB::Table
-    Properties :
-      TableName: MyTestDynamoDBTable
-      AttributeDefinitions:
-        - AttributeName: id
-          AttributeType: S
-      KeySchema:
-        - AttributeName: id
-          KeyType: HASH
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
