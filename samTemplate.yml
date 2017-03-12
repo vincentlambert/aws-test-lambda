@@ -51,7 +51,7 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
-  MyTestDynamoDBTableIamPolicy:
+  DynamoDBTableIamPolicy:
     Type: AWS::IAM::Policy
     DependsOn: MyTestDynamoDBTable
     Properties:
