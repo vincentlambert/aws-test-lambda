@@ -2,6 +2,11 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Hello World Test Application
 Resources:
+  IamRoleLambdaExecution:
+    Type: AWS::IAM::Role
+    Properties:
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -64,3 +69,5 @@ Resources:
               - dynamodb:GetItem
               - dynamodb:PutItem
             Resource: arn:aws:dynamodb:*:*:table/MyTestDynamoDBTable
+      Roles:
+        - Ref: IamRoleLambdaExecution
