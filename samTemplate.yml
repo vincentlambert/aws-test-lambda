@@ -9,12 +9,8 @@ Resources:
       AttributeDefinitions:
         - AttributeName: username
           AttributeType: S
-        - AttributeName: email
-          AttributeType: S
       KeySchema:
         - AttributeName: username
-          KeyType: HASH
-        - AttributeName: email
           KeyType: HASH
       ProvisionedThroughput:
         ReadCapacityUnits: 5
