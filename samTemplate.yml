@@ -43,10 +43,10 @@ Resources:
     Properties :
       TableName: MyTestDynamoDBTable
       AttributeDefinitions:
-        - AttributeName: username
+        - AttributeName: id
           AttributeType: S
       KeySchema:
-        - AttributeName: username
+        - AttributeName: id
           KeyType: HASH
       ProvisionedThroughput:
         ReadCapacityUnits: 5
