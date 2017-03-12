@@ -11,6 +11,6 @@ exports.handler = (event, context, callback) => {
     body: 'Hello World from Lambda from Github !',
     headers: {
       'Content-Type': 'application/json',
-    },
-  })
+    }
+  });
 };
