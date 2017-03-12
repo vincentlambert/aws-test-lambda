@@ -51,18 +51,3 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
-  DynamoDBTableIamPolicy:
-    Type: AWS::IAM::Policy
-    DependsOn: MyTestDynamoDBTable
-    Properties:
-      PolicyName: MyTestDynamoDBTableIamPolicy
-      PolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Action:
-              - dynamodb:GetItem
-              - dynamodb:PutItem
-            Resource: arn:aws:dynamodb:*:*:table/MyTestDynamoDBTable
-      Roles:
-        - Ref: IamRoleLambdaExecution
