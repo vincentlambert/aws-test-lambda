@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Hello World Test Application
 Resources:
-  IamRoleLambdaExecutionXXX:
+  IamRoleLambdaExecution:
     Type: AWS::IAM::Role
     Properties:
       ManagedPolicyArns:
@@ -23,7 +23,7 @@ Resources:
       Handler: index.handler
       Runtime: nodejs4.3
       CodeUri: ./
-      Role: !GetAtt IamRoleLambdaExecutionXXX.Arn
+      Role: !GetAtt IamRoleLambdaExecution.Arn
       Events:
         MyTestAPI:
           Type: Api
@@ -36,7 +36,7 @@ Resources:
       Handler: random.handler
       Runtime: nodejs4.3
       CodeUri: ./
-      Role: !GetAtt IamRoleLambdaExecutionXXX.Arn
+      Role: !GetAtt IamRoleLambdaExecution.Arn
       Events:
         MyTestAPI:
           Type: Api
@@ -49,7 +49,7 @@ Resources:
       Handler: test.handler
       Runtime: nodejs4.3
       CodeUri: ./
-      Role: !GetAtt IamRoleLambdaExecutionXXX.Arn
+      Role: !GetAtt IamRoleLambdaExecution.Arn
       Events:
         MyTestAPI:
           Type: Api
@@ -86,4 +86,4 @@ Resources:
               - dynamodb:Scan
             Resource: arn:aws:dynamodb:*:*:table/MyTestDynamoDBTable
       Roles:
-        - Ref: IamRoleLambdaExecutionXXX
+        - Ref: IamRoleLambdaExecution
